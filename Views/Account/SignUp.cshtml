@@ -6,9 +6,10 @@
 
 <h1>SignUp</h1>
 <hr />
+<p class="alert-info">@ViewBag.ValidationMessage</p>
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="SignUp">
+        <form asp-action="SignUp" name="frmSignUp">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             @*<div class="form-group">
                     <label asp-for="Id" class="control-label"></label>
@@ -70,7 +71,8 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="SignUp" class="btn btn-primary" />
+                <input type="reset" value="Reset" class="btn btn-secondary" />
             </div>
         </form>
     </div>
@@ -92,3 +94,4 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/js/signup.js" asp-append-version="true"></script>
 }
+

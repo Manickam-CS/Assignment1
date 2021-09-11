@@ -20,8 +20,11 @@ namespace Assignment1.Controllers
         {
             if (ModelState.IsValid)
             {
-                // TO Do:
-                return RedirectToAction("Index", "Home");
+                ViewBag.ValidationMessage = "Registration Success!";
+            }
+            else
+            {
+                ViewBag.ValidationMessage = "Registration Failed!";
             }
             return View();
         }

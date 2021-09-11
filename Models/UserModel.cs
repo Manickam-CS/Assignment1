@@ -17,11 +17,15 @@ namespace Assignment1.Models
         public string  Name { get; set; }
 
         [Required(ErrorMessage = "Please enter UserName")]
+        [MinLength(3)]
         [StringLength(100)]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Please enter Password")]
+
         [DataType(DataType.Password)]
+        //[RegularExpression("^(?=.{8,})(?=.*[a - z])(?=.*[A - Z])(?=.*[@#$%^&+=]).*$)", ErrorMessage = "Password should be atleast six characters long and must have at least one Uppercase letter, number and special characters")]
+        [RegularExpression(@"^(?=.*\d)(?=.*[A-Z])(?=.*[@#$%^&+=]).{6,}$", ErrorMessage = "Password should be atleast six characters long and must have at least one Uppercase letter, number and special characters")]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Please enter Confirm Password")]

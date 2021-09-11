@@ -7,7 +7,8 @@
     }
 });
 
-$(document).ready(function () {
+$(document).ready(function () {  
+
     var ddlCountry = $('#Country');
     ddlCountry.append($("<option></option>").val('').html('Please Select Country'));
     $.ajax({
@@ -51,7 +52,5 @@ $(document).ready(function () {
                 }
             });
         }
-
-
     });
 });  
